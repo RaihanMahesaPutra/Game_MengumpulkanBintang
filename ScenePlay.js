@@ -744,17 +744,45 @@
 
         function createEnemies() {
             enemies = [
+                // Musuh darat di ground utama
                 {
                     x: 300,
                     y: 670,
                     width: 48,
                     height: 64,
                     velocityX: 60,
-                    direction: 1, // 1 untuk kanan, -1 untuk kiri
+                    direction: 1,
                     patrolDistance: 200,
                     startX: 300,
-                    type: 'ground'
+                    type: 'ground',
+                    color: '#8B0000'
                 },
+                {
+                    x: 650,
+                    y: 670,
+                    width: 40,
+                    height: 56,
+                    velocityX: 45,
+                    direction: -1,
+                    patrolDistance: 150,
+                    startX: 650,
+                    type: 'ground',
+                    color: '#DC143C'
+                },
+                {
+                    x: 900,
+                    y: 670,
+                    width: 52,
+                    height: 68,
+                    velocityX: 35,
+                    direction: 1,
+                    patrolDistance: 100,
+                    startX: 900,
+                    type: 'ground',
+                    color: '#B22222'
+                },
+                
+                // Musuh terbang di berbagai ketinggian
                 {
                     x: 600,
                     y: 200,
@@ -764,10 +792,131 @@
                     direction: -1,
                     patrolDistance: 150,
                     startX: 600,
-                    type: 'flying'
+                    type: 'flying',
+                    color: '#4B0082',
+                    flySpeed: 0.003
+                },
+                {
+                    x: 200,
+                    y: 350,
+                    width: 44,
+                    height: 44,
+                    velocityX: 70,
+                    direction: 1,
+                    patrolDistance: 180,
+                    startX: 200,
+                    type: 'flying',
+                    color: '#663399',
+                    flySpeed: 0.004
+                },
+                {
+                    x: 750,
+                    y: 300,
+                    width: 36,
+                    height: 36,
+                    velocityX: 90,
+                    direction: -1,
+                    patrolDistance: 120,
+                    startX: 750,
+                    type: 'flying',
+                    color: '#9932CC',
+                    flySpeed: 0.005
+                },
+                {
+                    x: 100,
+                    y: 150,
+                    width: 40,
+                    height: 40,
+                    velocityX: 50,
+                    direction: 1,
+                    patrolDistance: 200,
+                    startX: 100,
+                    type: 'flying',
+                    color: '#8A2BE2',
+                    flySpeed: 0.002
+                },
+                
+                // Musuh platform (bergerak di platform khusus)
+                {
+                    x: 350,
+                    y: 290,
+                    width: 42,
+                    height: 58,
+                    velocityX: 55,
+                    direction: 1,
+                    patrolDistance: 80,
+                    startX: 350,
+                    type: 'platform',
+                    color: '#FF4500',
+                    platformY: 350
+                },
+                {
+                    x: 650,
+                    y: 490,
+                    width: 38,
+                    height: 54,
+                    velocityX: 65,
+                    direction: -1,
+                    patrolDistance: 90,
+                    startX: 650,
+                    type: 'platform',
+                    color: '#FF6347',
+                    platformY: 550
+                },
+                
+                // Musuh cepat (fast enemies)
+                {
+                    x: 50,
+                    y: 670,
+                    width: 32,
+                    height: 48,
+                    velocityX: 120,
+                    direction: 1,
+                    patrolDistance: 300,
+                    startX: 50,
+                    type: 'fast',
+                    color: '#FF1493'
+                },
+                
+                // Musuh mini (kecil tapi banyak)
+                {
+                    x: 400,
+                    y: 670,
+                    width: 24,
+                    height: 32,
+                    velocityX: 80,
+                    direction: 1,
+                    patrolDistance: 120,
+                    startX: 400,
+                    type: 'mini',
+                    color: '#20B2AA'
+                },
+                {
+                    x: 550,
+                    y: 670,
+                    width: 24,
+                    height: 32,
+                    velocityX: 75,
+                    direction: -1,
+                    patrolDistance: 140,
+                    startX: 550,
+                    type: 'mini',
+                    color: '#48D1CC'
+                },
+                {
+                    x: 800,
+                    y: 670,
+                    width: 24,
+                    height: 32,
+                    velocityX: 85,
+                    direction: 1,
+                    patrolDistance: 160,
+                    startX: 800,
+                    type: 'mini',
+                    color: '#00CED1'
                 }
             ];
-        }
+        }   
 
         // [Kode yang sama sampai fungsi updatePlayer()]
 
